@@ -56,7 +56,7 @@ namespace jwtAuthApi.Controllers
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
-                _configuration.GetSection("AppSetting:Token").Value));
+                _configuration.GetSection("AppSettings:Token").Value));
 
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
